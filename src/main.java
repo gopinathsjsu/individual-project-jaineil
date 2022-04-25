@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 import controller.CardController;
 import controller.InventoryController;
+import controller.OrderController;
 
 public class main {
 
@@ -21,6 +22,11 @@ public class main {
 
             // the following line will read your csv path into an ArrayList using BufferedReader
             CardController.readFromFilePath(cardDetailsFilePath);
+
+            System.out.println("Enter the path for the Input Data: ");
+            String inputFilePath = input.nextLine();
+            // the following line will read your csv path into an ArrayList using BufferedReader
+            OrderController.readFromFilePath(inputFilePath);
 
         } catch (Exception e) {
             System.err.println(e);
