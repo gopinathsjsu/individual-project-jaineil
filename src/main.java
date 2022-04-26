@@ -40,4 +40,7 @@ public class main {
         ValidateOrder.checkIfOrderQuantityIsValid();
     }
 
+    public static void generateOutput() {
+        OutputGenerator.generate();
+    }
 }
