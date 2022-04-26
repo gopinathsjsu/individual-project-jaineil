@@ -3,6 +3,8 @@ import java.util.Scanner;
 import controller.CardController;
 import controller.InventoryController;
 import controller.OrderController;
+import helper.OutputGenerator;
+import helper.ValidateOrder;
 
 public class main {
 
@@ -31,6 +33,11 @@ public class main {
         } catch (Exception e) {
             System.err.println(e);
         }
+    }
+
+    public static void orderValidation() {
+        ValidateOrder.getCategoryCountForEachOrderItem();
+        ValidateOrder.checkIfOrderQuantityIsValid();
     }
 
 }
