@@ -75,7 +75,5 @@ public class ValidateOrder {
                 invalidOrders.add(order);
             }
         }
-        System.out.println(totalAmountPaid);
-        System.out.println(invalidOrders);
     }
 }
