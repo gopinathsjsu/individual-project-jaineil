@@ -43,4 +43,8 @@ public class main {
     public static void generateOutput() {
         OutputGenerator.generate();
     }
+
+    public static void addNewCardToDatabase() {
+        CardController.addCard();
+    }
 }

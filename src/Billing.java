@@ -3,5 +3,6 @@ public class Billing {
         main.startMarket();
         main.orderValidation();
         main.generateOutput();
+        main.addNewCardToDatabase();
     }
 }
