@@ -25,3 +25,8 @@ I have used two design patterns as follows:
   - All the major app methods are invoked in Main class as methods. We make Main class a Singleton.
 - Factory (Creational Design Pattern) 
   - Used this pattern to hide the output generator logic from the client (in our case, the Billing class)
+
+---
+
+### Class diagram
+![Class Diagram](https://user-images.githubusercontent.com/26373088/167290924-ee975ec8-2b56-4f5b-8d09-9d01d5f8e508.jpg)
