@@ -1,10 +1,10 @@
 # individual-project-jaineil
 
-- Clone the repository
+- Download IntelliJ IDE.
+
+- Clone the repository:
   `git clone "https://github.com/gopinathsjsu/individual-project-jaineil.git"`
 
-- Set it as your current working directory
-  `cd individual-project-jaineil`
+- Open the cloned directory as your project.
 
-- Run the command
-  ``
+- Open the `Billing.java` on IntelliJ and hit the run icon to run the project.
