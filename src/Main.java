@@ -49,6 +49,7 @@ public class Main {
         ValidateOrder.checkIfOrderQuantityIsValid();
     }
 
+    // FACTORY: The client calls the interface without exposing output generator logic
     public static void generateOutput() {
         OutputGenerator.generate();
     }
