@@ -21,5 +21,7 @@
 
 I have used two design patterns as follows:
 
-- Singleton (Creational Design Pattern)
-- Chain of Responsibility (Behavioral Design Pattern)
+- Singleton (Creational Design Pattern) 
+  - All the major app methods are invoked in Main class as methods. We make Main class a Singleton.
+- Factory (Creational Design Pattern) 
+  - Used this pattern to hide the output generator logic from the client (in our case, the Billing class)
