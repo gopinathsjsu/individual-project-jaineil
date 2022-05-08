@@ -16,24 +16,10 @@ public class OutputGenerator {
         try {
 
             if (ValidateOrder.invalidOrders.size() == 0) {
-                String filePath = System.getProperty("user.dir") + "/output" + "/Order_" + randomNum + ".txt";
+                String filePath = System.getProperty("user.dir") + "/output" + "/OutputInvoice_" + randomNum + ".txt";
                 FileWriter errorFile = new FileWriter(filePath);
-                errorFile.write("Item,Quantity,Price,TotalPrice");
-                boolean isFirstLine = true;
+                errorFile.write("Item,Quantity,Price");
                 for (String name : OrderController.order.keySet()) {
-                    if (isFirstLine) {
-                        Order order = OrderController.order.get(name);
-                        InventoryItem item = InventoryController.inventory.get(name);
-                        errorFile.write(
-                                "\n" +
-                                        order.getItem() +
-                                        "," + order.getQuantity() +
-                                        "," + item.getPrice() +
-                                        "," + ValidateOrder.totalAmountPaid
-                        );
-                        isFirstLine = false;
-                        continue;
-                    }
                     Order order = OrderController.order.get(name);
                     InventoryItem item = InventoryController.inventory.get(name);
                     errorFile.write(
@@ -43,6 +29,7 @@ public class OutputGenerator {
                                     "," + item.getPrice()
                     );
                 }
+                errorFile.write("\n" + "Total Amount Paid: " + ValidateOrder.totalAmountPaid);
                 errorFile.close();
                 System.out.println("Output file for your order has been generated at: " + filePath);
             } else {

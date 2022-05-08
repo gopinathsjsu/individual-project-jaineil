@@ -6,9 +6,18 @@ import controller.OrderController;
 import helper.OutputGenerator;
 import helper.ValidateOrder;
 
-public class main {
+public class Main {
 
-    public static void startMarket() {
+    // SINGLETON
+    private static Main main = null;
+    private Main() {}
+    public static Main getInstance() {
+        if (main == null)
+            main = new Main();
+        return main;
+    }
+
+    static void startMarket() {
         try (Scanner input = new Scanner(System.in)) {
 
             // Get the input file path for stock csv
